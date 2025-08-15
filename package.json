@@ -1,27 +1,20 @@
 {
   "name": "projeto-champions",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "dist": "tsup src",
+    "build": "tsup src --out-dir dist",
+    "start": "node dist/server.js",
     "start:dev": "tsx --env-file=.env src/server.ts",
-    "start:watch": "tsx watch --env-file=.env src/server.ts",
-    "start:dist": "npm run dist && node dist/src/index.js",
-    "start": "tsx src/server.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "tsup": "^8.5.0"
+    "start:watch": "tsx watch --env-file=.env src/server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2"
   }
